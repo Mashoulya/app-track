@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Test Register (static)</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    form input { display: block; margin: 10px 0; padding: 8px; width: 250px; }
+    button { padding: 10px 20px; }
+    #output { margin-top: 20px; white-space: pre-wrap; background: #f0f0f0; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Inscription — page statique</h1>
+  <form id="regForm">
+    <input name="first_name" placeholder="Prénom" required />
+    <input name="last_name" placeholder="Nom" required />
+    <input name="email" type="email" placeholder="Email" required />
+    <input name="password" type="password" placeholder="Mot de passe" required />
+    <input name="password_confirmation" type="password" placeholder="Confirmer le mot de passe" required />
+    <button type="submit">S'inscrire</button>
+  </form>
+
+  <div id="output"></div>
+
+  <!-- JS séparé -->
+  <script src="/register.js"></script>
+</body>
+</html>
