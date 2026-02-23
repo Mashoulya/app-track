@@ -12,3 +12,4 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 
 Route::middleware(['auth:sanctum'])->post('/applications', [ApplicationController::class, 'store']);
+Route::middleware(['auth:sanctum'])->put('/applications/{id}', [ApplicationController::class, 'update']);
