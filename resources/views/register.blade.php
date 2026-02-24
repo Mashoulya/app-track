@@ -4,14 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Test Register</title>
-    <style>
-        body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:40px}
-        form{max-width:420px;margin:auto;display:grid;gap:8px}
-        input{padding:8px;font-size:16px}
-        button{padding:10px;font-size:16px}
-        .error{color:#b00020}
-        .success{color:green}
-    </style>
 </head>
 <body>
     <h1>Inscription (test)</h1>

@@ -1,10 +1,18 @@
 <?php
 
-// use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\ApplicationController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
-// Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-// Route::post('/register', [RegisteredUserController::class, 'store']);
+// Login / Auth routes
+require __DIR__.'/auth.php';
+
+Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+// Candidature routes
+Route::middleware(['auth:sanctum'])->get('/applications', [ApplicationController::class, 'index']);
+Route::middleware(['auth:sanctum'])->post('/applications', [ApplicationController::class, 'store']);
+Route::middleware(['auth:sanctum'])->put('/applications/{id}', [ApplicationController::class, 'update']);
+Route::middleware(['auth:sanctum'])->delete('/applications/{id}', [ApplicationController::class, 'destroy']);
