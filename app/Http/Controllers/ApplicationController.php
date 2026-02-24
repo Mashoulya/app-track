@@ -76,7 +76,7 @@ class ApplicationController extends Controller
             'position' => 'sometimes|string|max:191',
             'location' => 'sometimes|string|max:191',
             'source' => 'sometimes|string|max:191',
-            'contact' => 'sometimes|string',
+            'contact' => 'sometimes|string|max:191',
             'notes' => 'sometimes|string|nullable',
 
             // candidature
