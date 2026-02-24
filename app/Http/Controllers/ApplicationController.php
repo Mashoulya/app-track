@@ -70,7 +70,6 @@ class ApplicationController extends Controller
             return response()->json(['message' => 'Unauthorized'], 403);
         }
 
-        // Validation avec 'sometimes' pour accepter les champs partiels
         $validatedData = $request->validate([
             // entreprise
             'name' => 'sometimes|string|max:191',
@@ -111,7 +110,7 @@ class ApplicationController extends Controller
 
         return response()->json([
             'message' => 'Candidature mise à jour avec succès',
-            'application' => $application->load('company'), // renvoyer aussi la company
+            'application' => $application->load('company'),
         ], 200);
     }
 
