@@ -11,5 +11,8 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Candidature routes
+Route::middleware(['auth:sanctum'])->get('/applications', [ApplicationController::class, 'index']);
 Route::middleware(['auth:sanctum'])->post('/applications', [ApplicationController::class, 'store']);
 Route::middleware(['auth:sanctum'])->put('/applications/{id}', [ApplicationController::class, 'update']);
+Route::middleware(['auth:sanctum'])->delete('/applications/{id}', [ApplicationController::class, 'destroy']);
